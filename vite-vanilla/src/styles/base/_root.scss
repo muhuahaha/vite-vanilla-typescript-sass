@@ -1,0 +1,23 @@
+@use "../base" as *;
+@use "../abstract" as *;
+
+:root {
+  @each $color, $shades in $colors {
+    @each $prop, $shade in $shades {
+      --clr-#{$color}-#{$prop}: $value;
+    }
+  }
+  @each $screen-size, $font-size in $typography {
+    @if $screen-size == small {
+      @each $size, $value in $font-size {
+        --fs-#{$size}: #{$value};
+      }
+    } @else {
+      @include mq(small) {
+        @each $size, $value in $font-size {
+          --fs-#{$size}: #{$value};
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@use "../base" as *;
+@use "../abstracts" as *;
+
+.card {
+  font-size: $font-size;
+  color: $blue;
+
+  &-title {
+    color: lightcoral;
+  }
+
+  &-body {
+    background: rgb(0, 221, 255);
+  }
+}
