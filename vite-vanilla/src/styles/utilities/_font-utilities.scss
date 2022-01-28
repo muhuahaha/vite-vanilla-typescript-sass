@@ -1,0 +1,22 @@
+@use "../abstracts" as *;
+
+@each $screen-size, $font-sizes in $type-scale {
+  @debug $screen-size + " screen";
+  @each $font-size, $value in $font-sizes {
+    @if $screen-size == small {
+      @debug $font-size + " size";
+      @debug $value;
+      .font-#{$screen-size}-#{$font-size} {
+        font-size: $value;
+      }
+    } @else {
+      @include mq(small) {
+        @debug $value + " asdasd";
+
+        .font-#{$screen-size}-#{$font-size} {
+          font-size: $value;
+        }
+      }
+    }
+  }
+}

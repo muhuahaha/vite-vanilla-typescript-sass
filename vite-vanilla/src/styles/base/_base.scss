@@ -1,37 +1,5 @@
 @use "../abstracts" as *;
-
-@each $color, $shades in $colors {
-  @each $shade, $value in $shades {
-    .text-#{$color}-#{$shade} {
-      color: $value;
-    }
-    .bg-#{$color}-#{$shade} {
-      color: white;
-      background: $value;
-    }
-  }
-}
-
-@each $screen-size, $font-sizes in $type-scale {
-  @debug $screen-size + " screen";
-  @each $font-size, $value in $font-sizes {
-    @if $screen-size == small {
-      @debug $font-size + " size";
-      @debug $value;
-      .font-#{$screen-size}-#{$font-size} {
-        font-size: $value;
-      }
-    } @else {
-      @include mq(small) {
-        @debug $value + " asdasd";
-
-        .font-#{$screen-size}-#{$font-size} {
-          font-size: $value;
-        }
-      }
-    }
-  }
-}
+@use "../utilities" as *;
 
 body {
   font-size: 1rem;
