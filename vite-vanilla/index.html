@@ -10,30 +10,75 @@
 
   <body>
     <div id="app">
-      <header></header>
+      <header class="header">
+        <nav class="color">
+          <div class="flex flex-js-sb">
+            <div class="logo">YTK</div>
+
+            <a href="#" class="hamburger">
+              <span>Home</span>
+              <span>About</span>
+              <span>Contact</span>
+            </a>
+          </div>
+        </nav>
+      </header>
       <section id="zone-one">
         <div class="wrapper">
-          <h1>yoo</h1>
           <div class="card">
             <div class="card-body">
-              <div>
-                <h2>Hallo Test 2</h2>
-              </div>
-              <div class="card-title">Test test</div>
+              <div class="box orange">asdsa</div>
+              <div class="card-title">TestStation</div>
+              <div class="card-test">TestStation1</div>
             </div>
-            <div
-              class="font-small-800 font-large-400 text-primary-300 bg-secondary-300"
-            >
-              <div class="color"><h2 id="result"></h2></div>
-              <div class="color"><h2 id="result1"></h2></div>
-              <div class="color"><h2 id="result2"></h2></div>
+            <div class="font-small-100 font-large-500 test">
+              <div class="test-item">test</div>
+              <div class="color test-item"><h4 id="result"></h4></div>
+              <div class="color test-item"><h4 id="result1"></h4></div>
+              <div class="color test-item"><h4 id="result2"></h4></div>
             </div>
             <div class="generate-panel">
-              <div class="generate btn btn-blue">
-                <span class="sub-button">Generate</span>
+              <div class="generate btn color">
+                <span class="sub-button">Change Color</span>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrapper">
+          <h1>Finance Logger</h1>
+
+          <!-- output list -->
+          <ul class="item-list"></ul>
+        </div>
+        <div class="wrapper">
+          <form class="new-item-form">
+            <div class="field">
+              <label>Type:</label>
+              <select id="type">
+                <option value="invoice">Invoice</option>
+                <option value="payment">Payment</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>To / From:</label>
+              <input type="text" id="tofrom" />
+            </div>
+            <div class="field">
+              <label>Details:</label>
+              <input type="text" id="details" />
+            </div>
+            <div class="field">
+              <label>Amount (£):</label>
+              <input type="number" id="amount" />
+            </div>
+            <button>Add</button>
+          </form>
+          <div id="show"></div>
+
+          <a href="https://edabit.com/user/eomLS3wh6tQPN8jtH">Test Link</a>
         </div>
       </section>
     </div>

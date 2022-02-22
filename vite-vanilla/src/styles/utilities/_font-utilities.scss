@@ -4,14 +4,14 @@
   @debug $screen-size + " screen";
   @each $font-size, $value in $font-sizes {
     @if $screen-size == small {
-      @debug $font-size + " size";
-      @debug $value;
+      // @debug $font-size + " size";
+      // @debug $value;
       .font-#{$screen-size}-#{$font-size} {
         font-size: $value;
       }
     } @else {
       @include mq(small) {
-        @debug $value + " asdasd";
+        // @debug $value + " value";
 
         .font-#{$screen-size}-#{$font-size} {
           font-size: $value;

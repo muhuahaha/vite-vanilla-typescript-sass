@@ -3,13 +3,26 @@
 
 .card {
   font-size: $font-size;
-  color: $blue;
+  // color: $blue;
 
   &-title {
-    color: lightcoral;
+    font-weight: 400;
   }
 
   &-body {
     background: rgb(0, 221, 255);
+    padding: 1rem;
+    @include mq(small) {
+      background: rgb(216, 216, 216);
+    }
+    @include mq(large) {
+      background: rgb(191, 255, 0);
+    }
+  }
+  &-test {
+    font-size: 3rem;
   }
 }
+
+// .color {
+// }
